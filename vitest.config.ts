@@ -1,9 +1,14 @@
-import { defineConfig } from "vitest/config";
+import path from 'path'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
+    alias: {
+      '@src': path.resolve(__dirname, 'src'),
+    },
     coverage: {
-      reporter: ["text", "clover", "json"]
-    }
-  }
-});
+      include: ['src/**'],
+      reporter: ['text', 'clover', 'json'],
+    },
+  },
+})

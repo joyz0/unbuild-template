@@ -8,9 +8,9 @@
     "outDir": "dist",
     "strict": true,
     "declaration": true,
+    "jsx": "react-jsx",
     "paths": {
-      "@/*": ["./src/*"],
-      "playground/*": ["./playground/*"]
+      "@src/*": ["./src/*"]
     }
   },
   "include": ["src", "test", "playground"]

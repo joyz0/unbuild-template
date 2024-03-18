@@ -1,8 +1,8 @@
 import { expect, it, describe } from 'vitest'
-import {} from '@/index'
+import { test } from '@src/index'
 
 describe('packageName', () => {
   it.todo('pass', () => {
-    expect(true).toBe(true)
+    expect(test()).toBe(3)
   })
 })

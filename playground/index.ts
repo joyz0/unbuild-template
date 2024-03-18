@@ -1,3 +1,3 @@
-import { test } from '@/index'
+import { test } from '@src/index'
 
 console.log(test())
