@@ -1,8 +1,8 @@
 ## TODO
 
-[x] components下的文件生成到dist/components中
-[x] 支持postcss
-[x] 参考下https://github.com/antfu/starter-ts/blob/main/build.config.ts
+- [x] components下的文件生成到dist/components中
+- [x] 支持postcss
+- [x] 参考下https://github.com/antfu/starter-ts/blob/main/build.config.ts
 
 ## warning
 
