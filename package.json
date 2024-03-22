@@ -39,8 +39,8 @@
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "clean": "rimraf dist",
-    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
-    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
+    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs,.jsx,.tsx . && prettier -c src test stories playground",
+    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs,.jsx,.tsx . --fix && prettier -c src test stories playground -w",
     "stub": "pnpm unbuild --stub",
     "test": "pnpm lint && pnpm test:types && vitest run --coverage",
     "test:types": "tsc --noEmit --skipLibCheck",
@@ -58,7 +58,7 @@
     "*": [
       "prettier --write --cache --ignore-unknown"
     ],
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
       "eslint --cache --fix"
     ],
     "*.{css,less,scss}": [
