@@ -17,7 +17,7 @@ function createCommonConfig(): BuildConfig {
       },
     },
     // 外部依赖，不打包进库
-    externals: ['react', 'react-dom'],
+    externals: ['react', 'react-dom', 'dompurify'],
     alias: {
       '@src': path.resolve(__dirname, 'src'),
     },
