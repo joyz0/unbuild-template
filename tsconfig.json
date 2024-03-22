@@ -5,7 +5,8 @@
     "skipLibCheck": true,
 
     "moduleResolution": "Node",
-    "isolatedModules": false,
+    "isolatedModules": true,
+    "esModuleInterop": true,
 
     "strict": true,
     "noUnusedLocals": true,
@@ -31,5 +32,5 @@
     },
     "verbatimModuleSyntax": false
   },
-  "include": ["src", "test", "playground"]
+  "include": ["src", "test", "playground", "stories"]
 }
