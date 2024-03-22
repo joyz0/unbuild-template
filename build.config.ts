@@ -1,21 +1,11 @@
 import path from 'path'
-import { defineBuildConfig } from 'unbuild'
+import { defineBuildConfig, type BuildConfig } from 'unbuild'
 import postcss from 'rollup-plugin-postcss'
 
-export default defineBuildConfig([
-  {
-    // 入口文件的路径
-    entries: [
-      {
-        builder: 'mkdist',
-        input: './src/',
-        esbuild: { minify: true },
-      },
-    ],
-    declaration: true,
+function createCommonConfig(): BuildConfig {
+  return {
     clean: true,
     failOnWarn: false,
-    // 输出格式
     rollup: {
       emitCJS: true,
       resolve: {
@@ -44,16 +34,28 @@ export default defineBuildConfig([
         }
       },
     },
+  }
+}
+
+const commonConfig = createCommonConfig()
+
+export default defineBuildConfig([
+  {
+    // 入口文件的路径
+    entries: [
+      {
+        builder: 'mkdist',
+        input: './src/',
+        esbuild: { minify: true },
+      },
+    ],
+    declaration: true,
+    ...commonConfig,
   },
   {
     name: 'minified',
     entries: ['./src/index'],
     outDir: 'dist/min',
-    failOnWarn: false,
-    rollup: {
-      esbuild: {
-        minify: true,
-      },
-    },
+    ...commonConfig,
   },
 ])
