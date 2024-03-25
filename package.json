@@ -1,8 +1,8 @@
 {
-  "name": "unbuild-template",
+  "name": "@joyz0/unbuild-template",
   "version": "0.0.0",
   "description": "unbuild template project",
-  "repository": "joyz0/unbuild-template",
+  "repository": "https://github.com/joyz0/unbuild-template",
   "homepage": "https://github.com/joyz0/unbuild-template",
   "sideEffects": false,
   "type": "module",
